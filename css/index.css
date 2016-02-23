@@ -1,0 +1,78 @@
+body{
+	font-family: Arial;
+	margin:0;
+}
+*{
+	cursor:default;
+}
+ul,li{
+	list-style:none;
+}
+.zuo{
+	color:white;
+	width:300px;
+	position: absolute;
+	top:0;
+	bottom:0;
+	background: #383836;
+}
+.zuo .title{
+	padding:20px;
+	color:white;
+	font-size:40px;
+}
+.zuo ul li{
+	border-bottom:1px solid white;
+	padding:20px;
+	font-size: 20px;
+}
+.zuo li span:first-child{
+	display: inline-block;
+	padding: 8px;
+}
+div.you{
+	background: none;
+}
+.you{
+	position: absolute;
+	left:300px;
+	top:0;
+	bottom: 0;
+	right: 0;
+	background:#eee;
+	padding:40px 100px;
+}
+.zuo li .red{
+	background: red;
+}
+.blue{
+	background: blue;
+	color:blue;
+}
+.yellow{
+	background: yellow;
+	color:yellow;
+}
+.green{
+	background: green;
+	color:green;
+}
+.orange{
+	background: orange;
+	color:orange;
+}
+.brow{
+	background: brown; 
+	color:brown;
+}
+.pink{
+	background: pink;
+	color:pink;
+}
+.purple{
+	background: purple;	
+	color:purple;
+}
+.active {
+	background: red;
+}

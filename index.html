@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="reminder">
+<head>
+	<meta charset="UTF-8">
+	<title>iCloud Remider</title>
+	<script src="js/angular.js"></script>
+	<script src="js/reminder.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="rdCtrl" ng-dblclick="clear()">
+	<div class="zuo">
+		<div class="title">
+			<span>iCloud</span>
+			<span ng-click="addItem()" ng-dblclick="zz($event)" >+</span>
+		</div>
+		<ul>
+			<li ng-repeat="value in shijianliebiao track by $index" ng-click="setItem($index)" ng-class="{active:cindex == $index}">
+				<span ng-class="value.color"></span>
+				<span>{{value.name}}</span>
+			</li>
+		</ul>
+	</div>
+	<div class="you" ng-class="shijianliebiao[cindex].color">
+		<button ng-click="deleteItem()">删除列表</button>
+		<h1>{{shijianliebiao[cindex].name}}</h1>
+		<div class="done-item">总数:<span>{{shijianliebiao[cindex].items.length}}</span></div>
+		<ul>
+			<li ng-repeat="value in shijianliebiao[cindex].items track by $index">
+				<span>{{value.isDone}}</span>	
+				<span>{{value.title}}</span>	
+			</li>
+		</ul>
+		<div class="new-item">点击添加新条目</div>
+	</div>
+</body>
+</html>
