@@ -8,6 +8,11 @@ body{
 ul,li{
 	list-style:none;
 }
+.zuo input{
+    background: none;
+    border: none;
+    outline:none;
+}
 .zuo{
 	color:white;
 	width:300px;
@@ -45,6 +50,9 @@ div.you{
 .zuo li .red{
 	background: red;
 }
+.you li{
+    padding:10px;
+}
 .blue{
 	background: blue;
 	color:blue;
@@ -75,4 +83,11 @@ div.you{
 }
 .active {
 	background: red;
+}
+.yuandian{
+    display: inline-block;
+    width:20px;
+    height: 20px;
+    margin-right:10px;
+    border-radius: 50%;
 }

@@ -32,6 +32,29 @@ reminder.controller('rdCtrl', ['$scope', function($scope){
 		$scope.cindex = 0;
 		localStorage.data = JSON.stringify($scope.shijianliebiao);
 	}
+
+  $scope.addTodo = function() {
+    var cu = $scope.shijianliebiao[$scope.cindex];
+    var data = {title:'新条目'+(cu.items.length+1),isDone:false};
+    cu.items.push(data);
+    localStorage.data = JSON.stringify($scope.shijianliebiao);
+  }
+
+  $scope.deleteTodo = function(index) {
+    var r = [];
+    var cu = $scope.shijianliebiao[$scope.cindex]; 
+    for(var i=0 ; i<cu.items.length; i++){
+      if( i != index){
+        r.push(cu.items[i]);
+      }
+    } 
+    $scope.shijianliebiao[$scope.cindex].items = r; 
+    localStorage.data = JSON.stringify($scope.shijianliebiao);
+  }
+  
+  $scope.save = function() {
+    localStorage.data = JSON.stringify($scope.shijianliebiao);
+  }
 	// $scope.clear = function() {
 	// 	localStorage.clear();
 	// 	location.reload();
